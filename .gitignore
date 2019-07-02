@@ -12,7 +12,6 @@ camera3-dist.conf
 camera4-dist.conf
 
 # automake
-*.o
 *.log
 .depend
 autom4te.cache
@@ -21,5 +20,4 @@ config.status
 configure
 config.h.in
 
-po/*.mo
 .vscode/
