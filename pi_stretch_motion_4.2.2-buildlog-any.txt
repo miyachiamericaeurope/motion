@@ -1,0 +1,319 @@
+dpkg-buildpackage: info: source package motion
+dpkg-buildpackage: info: source version 4.2.2-1
+dpkg-buildpackage: info: source distribution stretch
+dpkg-buildpackage: info: source changed by tyson <tyson.colby@innotech.engineering>
+ dpkg-source --before-build motion
+dpkg-buildpackage: info: host architecture armhf
+dpkg-source: info: using options from motion/debian/source/options: --extend-diff-ignore=.*
+ fakeroot debian/rules clean
+dh clean --with autoreconf
+   dh_testdir
+   dh_auto_clean
+   dh_autoreconf_clean
+   dh_clean
+ dpkg-source -b motion
+dpkg-source: info: using options from motion/debian/source/options: --extend-diff-ignore=.*
+dpkg-source: info: using source format '3.0 (quilt)'
+dpkg-source: info: building motion using existing ./motion_4.2.2.orig.tar.gz
+dpkg-source: info: building motion in motion_4.2.2-1.debian.tar.xz
+dpkg-source: info: building motion in motion_4.2.2-1.dsc
+ debian/rules build
+dh build --with autoreconf
+   dh_testdir
+   dh_update_autotools_config
+   dh_autoreconf
+   debian/rules override_dh_auto_configure
+make[1]: Entering directory '/tmp/motion.7GfWX3/motion'
+dh_auto_configure -- \
+  --with-ffmpeg=/usr/lib/arm-linux-gnueabihf \
+  --with-mysql-lib=/usr/lib/arm-linux-gnueabihf \
+  --with-pgsql-lib=/usr/lib/arm-linux-gnueabihf \
+  --without-optimizecpu
+	./configure --build=arm-linux-gnueabihf --prefix=/usr --includedir=\${prefix}/include --mandir=\${prefix}/share/man --infodir=\${prefix}/share/info --sysconfdir=/etc --localstatedir=/var --disable-silent-rules --libdir=\${prefix}/lib/arm-linux-gnueabihf --libexecdir=\${prefix}/lib/arm-linux-gnueabihf --disable-maintainer-mode --disable-dependency-tracking --with-ffmpeg=/usr/lib/arm-linux-gnueabihf --with-mysql-lib=/usr/lib/arm-linux-gnueabihf --with-pgsql-lib=/usr/lib/arm-linux-gnueabihf --without-optimizecpu
+configure: WARNING: unrecognized options: --disable-silent-rules, --disable-maintainer-mode, --disable-dependency-tracking
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking for ANSI C header files... (cached) yes
+checking for an ANSI C-conforming const... yes
+checking for Darwin/BSD... no
+checking linux/videodev2.h usability... yes
+checking linux/videodev2.h presence... yes
+checking for linux/videodev2.h... yes
+checking for pthread_setname_np... yes
+checking for pthread_getname_np... yes
+checking for XSI strerror_r... no
+checking libintl.h usability... yes
+checking libintl.h presence... yes
+checking for libintl.h... yes
+checking Native language support... yes
+checking setjmp.h usability... yes
+checking setjmp.h presence... yes
+checking for setjmp.h... yes
+checking jerror.h usability... yes
+checking jerror.h presence... yes
+checking for jerror.h... yes
+checking jpeglib.h usability... yes
+checking jpeglib.h presence... yes
+checking for jpeglib.h... yes
+checking jpg libraries... yes
+checking microhttpd.h usability... yes
+checking microhttpd.h presence... yes
+checking for microhttpd.h... yes
+checking libmicrohttpd libraries... yes
+checking for pkg-config... yes
+checking for libwebp... found
+checking for libavformat... yes 57.56.101
+checking sqlite3.h usability... yes
+checking sqlite3.h presence... yes
+checking for sqlite3.h... yes
+checking for db package config... mariadb found
+checking for mysql_init in -lmysqlclient... yes
+checking for pgsql package config... found
+checking for PQconnectStart in -lpq... yes
+checking stdio.h usability... yes
+checking stdio.h presence... yes
+checking for stdio.h... yes
+checking for unistd.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking time.h usability... yes
+checking time.h presence... yes
+checking for time.h... yes
+checking signal.h usability... yes
+checking signal.h presence... yes
+checking for signal.h... yes
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking sys/mman.h usability... yes
+checking sys/mman.h presence... yes
+checking for sys/mman.h... yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking for sys/types.h... (cached) yes
+configure: creating ./config.status
+config.status: creating camera1-dist.conf
+config.status: creating camera2-dist.conf
+config.status: creating camera3-dist.conf
+config.status: creating camera4-dist.conf
+config.status: creating motion-dist.conf
+config.status: creating motion.init-FreeBSD.sh
+config.status: creating motion.init-Debian
+config.status: creating motion.service
+config.status: creating motion.spec
+config.status: creating Makefile
+config.status: creating config.h
+configure: WARNING: unrecognized options: --disable-silent-rules, --disable-maintainer-mode, --disable-dependency-tracking
+
+   **************************
+      Configure status       
+      motion 4.2.2
+   **************************
+
+OS             :     Linux
+pthread support:     Yes
+jpeg support:        Yes
+webp support:        Yes
+V4L2 support:        Yes
+BKTR support:        No
+MMAL support:        Yes
+ ... MMAL_CFLAGS: -std=gnu99 -DHAVE_MMAL -Irasppicam -I/opt/vc/include
+ ... MMAL_OBJ: mmalcam.o raspicam/RaspiCamControl.o raspicam/RaspiCLI.o
+ ... MMAL_LIBS: -L/opt/vc/lib -lmmal_core -lmmal_util -Wl,--push-state,--no-as-needed -lmmal_vc_client -Wl,--pop-state -lvcos -lvchostif -lvchiq_arm
+FFmpeg support:      Yes
+ ... FFMPEG_CFLAGS: -I/usr/include/arm-linux-gnueabihf
+ ... FFMPEG_LIBS: -lavutil -lavformat -lavcodec -lswscale -lavdevice
+SQLite3 support:     Yes
+MYSQL support:       Yes
+PostgreSQL support:  Yes
+
+CFLAGS:  -g -O2 -fdebug-prefix-map=/tmp/motion.7GfWX3/motion=. -fstack-protector-strong -Wformat -Werror=format-security -D_THREAD_SAFE -I/usr/include/mysql -I/usr/include/mysql/.. -I/usr/include/postgresql 
+LIBS: -lm  -pthread -ljpeg -lmicrohttpd  -lwebpmux -lwebp -lsqlite3 -lmariadbclient -lpthread -lz -lm -ldl -lpq
+LDFLAGS:  -Wl,-z,relro -Wl,-z,now
+
+Install prefix:       /usr
+
+make[1]: Leaving directory '/tmp/motion.7GfWX3/motion'
+   dh_auto_build
+	make -j1
+make[1]: Entering directory '/tmp/motion.7GfWX3/motion'
+Welcome to the setup procedure for Motion, the motion detection daemon! If you get
+error messages during this procedure, please report them to the mailing list. The
+Motion Guide contains all information you should need to get Motion up and running.
+
+Version: 4.2.2
+Platform: Linux (if this is incorrect, please read README.FreeBSD)
+
+Generating dependencies, please wait...
+
+Compiling Motion object files...
+--------------------------------------------------------------------------------
+-e 	Compiling motion.c into motion.o...
+-e 	Compiling logger.c into logger.o...
+-e 	Compiling conf.c into conf.o...
+-e 	Compiling draw.c into draw.o...
+-e 	Compiling jpegutils.c into jpegutils.o...
+-e 	Compiling video_loopback.c into video_loopback.o...
+-e 	Compiling video_v4l2.c into video_v4l2.o...
+-e 	Compiling video_common.c into video_common.o...
+-e 	Compiling video_bktr.c into video_bktr.o...
+-e 	Compiling netcam.c into netcam.o...
+-e 	Compiling netcam_http.c into netcam_http.o...
+-e 	Compiling netcam_ftp.c into netcam_ftp.o...
+-e 	Compiling netcam_jpeg.c into netcam_jpeg.o...
+-e 	Compiling netcam_wget.c into netcam_wget.o...
+-e 	Compiling track.c into track.o...
+-e 	Compiling alg.c into alg.o...
+-e 	Compiling event.c into event.o...
+-e 	Compiling picture.c into picture.o...
+-e 	Compiling rotate.c into rotate.o...
+-e 	Compiling translate.c into translate.o...
+-e 	Compiling webu.c into webu.o...
+-e 	Compiling webu_html.c into webu_html.o...
+-e 	Compiling webu_text.c into webu_text.o...
+-e 	Compiling webu_stream.c into webu_stream.o...
+-e 	Compiling stream.c into stream.o...
+-e 	Compiling md5.c into md5.o...
+-e 	Compiling netcam_rtsp.c into netcam_rtsp.o...
+-e 	Compiling ffmpeg.c into ffmpeg.o...
+-e 	Compiling mmalcam.c into mmalcam.o...
+-e 	Compiling raspicam/RaspiCamControl.c into raspicam/RaspiCamControl.o...
+-e 	Compiling raspicam/RaspiCLI.c into raspicam/RaspiCLI.o...
+--------------------------------------------------------------------------------
+Motion object files compiled.
+
+Linking Motion...
+--------------------------------------------------------------------------------
+gcc -Wl,-z,relro -Wl,-z,now -o motion motion.o logger.o conf.o draw.o jpegutils.o video_loopback.o video_v4l2.o video_common.o video_bktr.o netcam.o netcam_http.o netcam_ftp.o netcam_jpeg.o netcam_wget.o track.o alg.o event.o picture.o rotate.o translate.o webu.o webu_html.o webu_text.o webu_stream.o stream.o md5.o netcam_rtsp.o ffmpeg.o mmalcam.o raspicam/RaspiCamControl.o raspicam/RaspiCLI.o  -lm  -pthread -ljpeg -lmicrohttpd  -lwebpmux -lwebp -lsqlite3 -lmariadbclient -lpthread -lz -lm -ldl -lpq  -L/opt/vc/lib -lmmal_core -lmmal_util -Wl,--push-state,--no-as-needed -lmmal_vc_client -Wl,--pop-state -lvcos -lvchostif -lvchiq_arm -lavutil -lavformat -lavcodec -lswscale -lavdevice
+--------------------------------------------------------------------------------
+Motion has been linked.
+
+Performing the conversion of .po to .mo files
+
+Build complete, run "make install" to install Motion!
+
+make[1]: Leaving directory '/tmp/motion.7GfWX3/motion'
+   dh_auto_test
+   create-stamp debian/debhelper-build-stamp
+ fakeroot debian/rules binary
+dh binary --with autoreconf
+   create-stamp debian/debhelper-build-stamp
+   dh_testroot
+   dh_prep
+   debian/rules override_dh_auto_install
+make[1]: Entering directory '/tmp/motion.7GfWX3/motion'
+dh_auto_install
+	make -j1 install DESTDIR=/tmp/motion.7GfWX3/motion/debian/motion AM_UPDATE_INFO_DIR=no
+make[2]: Entering directory '/tmp/motion.7GfWX3/motion'
+Installing files...
+--------------------------------------------------------------------------------
+mkdir -p /tmp/motion.7GfWX3/motion/debian/motion/usr/bin
+mkdir -p /tmp/motion.7GfWX3/motion/debian/motion/usr/share/man/man1
+mkdir -p /tmp/motion.7GfWX3/motion/debian/motion/etc/motion
+mkdir -p /tmp/motion.7GfWX3/motion/debian/motion/usr/share/doc/motion
+mkdir -p /tmp/motion.7GfWX3/motion/debian/motion/usr/share/motion/examples
+install -m 644 ./motion.1 /tmp/motion.7GfWX3/motion/debian/motion/usr/share/man/man1
+install -m 644 ./CHANGELOG ./COPYING ./CREDITS ./README.md ./motion_guide.html ./motion_stylesheet.css ./motion_config.html ./motion_build.html ./mask1.png ./normal.jpg ./outputmotion1.jpg ./outputnormal1.jpg /tmp/motion.7GfWX3/motion/debian/motion/usr/share/doc/motion
+install -m 644 *.conf motion.service /tmp/motion.7GfWX3/motion/debian/motion/usr/share/motion/examples
+install motion.init-Debian motion.init-FreeBSD.sh /tmp/motion.7GfWX3/motion/debian/motion/usr/share/motion/examples
+install -m 644 motion-dist.conf /tmp/motion.7GfWX3/motion/debian/motion/etc/motion
+install -m 644 camera1-dist.conf /tmp/motion.7GfWX3/motion/debian/motion/etc/motion
+install -m 644 camera2-dist.conf /tmp/motion.7GfWX3/motion/debian/motion/etc/motion
+install -m 644 camera3-dist.conf /tmp/motion.7GfWX3/motion/debian/motion/etc/motion
+install -m 644 camera4-dist.conf /tmp/motion.7GfWX3/motion/debian/motion/etc/motion
+Installing translation files
+--------------------------------------------------------------------------------
+Install complete! The default configuration file, motion-dist.conf, has been
+installed to /etc/motion. You need to rename/copy it to motion.conf
+for Motion to find it. More configuration examples as well as init scripts
+can be found in /usr/share/motion/examples.
+
+make[2]: Leaving directory '/tmp/motion.7GfWX3/motion'
+cd debian/motion/etc/motion && mv motion-dist.conf motion.conf
+make[1]: Leaving directory '/tmp/motion.7GfWX3/motion'
+   dh_installdocs
+   dh_installchangelogs
+   dh_installman
+   dh_installdebconf
+   dh_installinit
+   dh_installlogrotate
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+	Normalized debian/motion/usr/share/locale/ja/LC_MESSAGES/motion.mo
+	Normalized debian/motion/usr/share/locale/de/LC_MESSAGES/motion.mo
+	Normalized debian/motion/usr/share/locale/fi/LC_MESSAGES/motion.mo
+	Normalized debian/motion/usr/share/locale/pt/LC_MESSAGES/motion.mo
+	Normalized debian/motion/usr/share/locale/da/LC_MESSAGES/motion.mo
+	Normalized debian/motion/usr/share/locale/fr/LC_MESSAGES/motion.mo
+	Normalized debian/motion/usr/share/locale/no/LC_MESSAGES/motion.mo
+	Normalized debian/motion/usr/share/locale/es/LC_MESSAGES/motion.mo
+	Normalized debian/motion/usr/share/locale/it/LC_MESSAGES/motion.mo
+	Normalized debian/motion/usr/share/locale/zh/LC_MESSAGES/motion.mo
+	Normalized debian/motion/usr/share/locale/sv/LC_MESSAGES/motion.mo
+	Normalized debian/motion/usr/share/locale/li/LC_MESSAGES/motion.mo
+	Normalized debian/motion/usr/share/locale/nl/LC_MESSAGES/motion.mo
+	Normalized debian/motion/usr/share/locale/ko/LC_MESSAGES/motion.mo
+   dh_compress
+   dh_fixperms
+   dh_strip
+   dh_makeshlibs
+   dh_shlibdeps
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libmmal_core.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libmmal_core.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libmmal_util.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libmmal_util.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libmmal_vc_client.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libmmal_vc_client.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libvcos.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libvcos.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libvchiq_arm.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libvchiq_arm.so'
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/motion/usr/bin/motion was not linked against libm.so.6 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/motion/usr/bin/motion was not linked against libdl.so.2 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/motion/usr/bin/motion was not linked against ld-linux-armhf.so.3 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/motion/usr/bin/motion was not linked against libz.so.1 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/motion/usr/bin/motion was not linked against libmmal_vc_client.so (it uses none of the library's symbols)
+   dh_installdeb
+   dh_gencontrol
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package 'motion-dbgsym' in '../motion-dbgsym_4.2.2-1_armhf.deb'.
+dpkg-deb: building package 'motion' in '../motion_4.2.2-1_armhf.deb'.
+ dpkg-genbuildinfo
+ dpkg-genchanges  >../motion_4.2.2-1_armhf.changes
+dpkg-genchanges: info: including full source code in upload
+ dpkg-source --after-build motion
+dpkg-source: info: using options from motion/debian/source/options: --extend-diff-ignore=.*
+dpkg-buildpackage: info: full upload (original source is included)

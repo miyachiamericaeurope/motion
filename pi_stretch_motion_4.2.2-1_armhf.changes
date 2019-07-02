@@ -1,0 +1,37 @@
+Format: 1.8
+Date: Tue, 02 Jul 2019 09:07:33 -0700
+Source: motion
+Binary: motion
+Architecture: source armhf
+Version: 4.2.2-1
+Distribution: stretch
+Urgency: medium
+Maintainer: Mr-Dave <MotionMrDave@gmail.com>
+Changed-By: tyson <tyson.colby@innotech.engineering>
+Description:
+ motion     - V4L2 capture program supporting motion detection
+Changes:
+ motion (4.2.2-1) stretch; urgency=medium
+ .
+   * See changelog in source
+Checksums-Sha1:
+ 74021aae05caf2fd16971519054217ab7f405338 1000 motion_4.2.2-1.dsc
+ b9f2ee121fc19d084c2090ca2cc255401525daa8 701051 motion_4.2.2.orig.tar.gz
+ 1445410528f8f832b76111a1e079154eb6a4d5ab 10328 motion_4.2.2-1.debian.tar.xz
+ a165a6a7769351ea491f8376fd01dc11b3a3313e 885680 motion-dbgsym_4.2.2-1_armhf.deb
+ 455093c62c9c3c356b35c57286cbc42a28f59e53 11037 motion_4.2.2-1_armhf.buildinfo
+ 4e559317c284afa88d89576336e1668e00b1feb4 314200 motion_4.2.2-1_armhf.deb
+Checksums-Sha256:
+ 0b2fe1286da385b84e762cbb19dcdbe364ffa6530e703fd8ce0ac9375cb995b1 1000 motion_4.2.2-1.dsc
+ 55c9afff9e548f4687a2e85fe1ade12b73b618f9aad125fa4eba1307d099bd78 701051 motion_4.2.2.orig.tar.gz
+ 7703455d09df05884477f31734c18a81d5883a62f9b5d57d94658c95fd1e8d50 10328 motion_4.2.2-1.debian.tar.xz
+ 952a84d9624f79f6b16082e8312e179af985d5c75e0d6609b4fa6caf8df3674d 885680 motion-dbgsym_4.2.2-1_armhf.deb
+ c87661fff8a9aac639ddf2e39daff50c16859396f02a32c3debf22670c967db7 11037 motion_4.2.2-1_armhf.buildinfo
+ 5685ec53211e8e5a5974b09062477368ccec9ffa7d53a1c9fa35a8b2b15f456e 314200 motion_4.2.2-1_armhf.deb
+Files:
+ 68a0becabfc13eda4a38878a064ee924 1000 video optional motion_4.2.2-1.dsc
+ 10d4494182c90877e60cf6aad81bd83c 701051 video optional motion_4.2.2.orig.tar.gz
+ 0f961d8f9bdee336f87ec3e21bbda66e 10328 video optional motion_4.2.2-1.debian.tar.xz
+ 5310123c7f194222f4b1276041b7e23c 885680 debug extra motion-dbgsym_4.2.2-1_armhf.deb
+ 85a344953bafed29e07cf16120632988 11037 video optional motion_4.2.2-1_armhf.buildinfo
+ 5f8271e94a549ab6ffff46c1f792e57e 314200 video optional motion_4.2.2-1_armhf.deb
