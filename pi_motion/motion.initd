@@ -52,6 +52,7 @@ case "$1" in
   start)
     if check_daemon_enabled ; then
 	if [ -e "$CAMERA" ]; then
+	    sleep 30
             if ! [ -d /var/run/motion ]; then
                 mkdir -m 02750 /var/run/motion
                 chown motion:motion /var/run/motion
